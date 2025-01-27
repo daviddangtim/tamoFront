@@ -9,41 +9,19 @@
 </head>
 <body class="bg-gray-100 text-gray-800">
 
-  <div class="flex h-screen">
-    <!-- Sidebar -->
-    <aside class="w-64 bg-black text-white flex flex-col justify-between">
-      <div>
-        <div class="p-4 flex items-center">
-          <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold">Logo</div>
-          <h1 class="ml-4 text-xl font-semibold">Dashboard</h1>
-        </div>
-        <nav class="mt-6">
-          <ul>
-            <li class="p-4 hover:bg-gray-800"><a href="/home">Home</a></li>
-            <li class="p-4 hover:bg-gray-800"><a href="/overview">Overview</a></li>
-            <li class="p-4 hover:bg-gray-800"><a href="/therapy">Therapy</a></li>
-            <li class="p-4 hover:bg-gray-800"><a href="/significant-events">Significant Events</a></li>
-            <li class="p-4 hover:bg-gray-800"><a href="/appointments">Appointments</a></li>
-            <li class="p-4 hover:bg-gray-800"><a href="/patients">Patients</a></li>
-            <li class="p-4 bg-blue-500"><a href="/inventory" class="text-white">Inventory</a></li>
-          </ul>
-        </nav>
-      </div>
-      <div class="p-4">
-        <a href="/support" class="block p-2 bg-gray-800 rounded text-center">Support</a>
-        <a href="/logout" class="block p-2 bg-red-500 rounded text-center mt-4">Log out</a>
-        <div class="flex items-center mt-6">
-          <div class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center">
-            <img src="/path-to-profile.png" alt="Profile" class="w-8 h-8 rounded-full">
+    <div class="flex">
+        <!-- Sidebar -->
+        <div class="w-1/5 bg-black text-white h-screen p-4">
+          <div class="mb-6">
+            <h1 class="text-center text-xl font-bold">Healthcare</h1>
           </div>
-          <div class="ml-4">
-            <p>Zeller Timothy Aaron</p>
-            <p class="text-sm text-gray-400">zellertimothy@gmail.com</p>
+            <ul>
+            <li class="py-2 px-4 hover:bg-gray-700"><a href="#">Dashboard</a></li>
+            <li class="py-2 px-4 hover:bg-gray-700"><a href="#">Patients</a></li>
+            <li class="py-2 px-4 hover:bg-gray-700"><a href="#">Appointments</a></li>
+            <li class="py-2 px-4 hover:bg-gray-700"><a href="#">Inventory</a></li>
+            </ul>
           </div>
-        </div>
-      </div>
-    </aside>
-
     <!-- Main Content -->
     <main class="flex-1 bg-gray-50">
       <header class="bg-black text-white p-4 flex items-center justify-between">
@@ -58,7 +36,7 @@
         <!-- Form for Adding Inventory Items -->
         <div class="bg-white p-4 rounded-lg shadow">
           <h3 class="text-lg font-bold mb-2">Add New Item</h3>
-          <form hx-post="/inventory" class="space-y-4">
+          <form hx-post="https://tamoagrohealth.onrender.com/inventory" class="space-y-4">
             <input type="text" name="item_name" placeholder="Item Name" class="block w-full p-2 border border-gray-300 rounded">
             <input type="number" name="quantity" placeholder="Quantity" class="block w-full p-2 border border-gray-300 rounded">
             <textarea name="description" placeholder="Description" class="block w-full p-2 border border-gray-300 rounded"></textarea>
